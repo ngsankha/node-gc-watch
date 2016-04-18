@@ -19,6 +19,13 @@
     "install": "node-gyp rebuild",
     "test": "node_modules/.bin/mocha --expose-gc"
   },
+  "keywords": [
+    "gc",
+    "garbage",
+    "performance",
+    "memory",
+    "profile"
+  ],
   "devDependencies": {
     "mocha": "^2.4.5",
     "should": "^8.3.1"
