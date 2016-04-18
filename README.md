@@ -1,4 +1,4 @@
-# node-gc-watch
+# node-gc-watch [![Build Status](https://travis-ci.org/sankha93/node-gc-watch.svg?branch=master)](https://travis-ci.org/sankha93/node-gc-watch)
 
 `node-gc-watch` helps you attach your own event handlers to track when a GC is being fired in your Node.js application. Currently it provides a `beforeGC` and `afterGC` event.
 
