@@ -16,7 +16,8 @@
   },
   "gypfile": true,
   "scripts": {
-    "install": "node-gyp rebuild"
+    "install": "node-gyp rebuild",
+    "test": "node_modules/.bin/mocha --expose-gc"
   },
   "devDependencies": {
     "mocha": "^2.4.5",

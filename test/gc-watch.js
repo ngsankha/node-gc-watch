@@ -8,3 +8,27 @@ describe('the library', function() {
     should.exist(gcWatch.removeAllListeners);
   });
 });
+
+describe('setting event handlers', function() {
+  it('raises beforeGC event', function() {
+    var beforeGCTime;
+    gcWatch.once('beforeGC', function() {
+      beforeGCTime = Date.now();
+    });
+    var beforeGCFired = Date.now();
+    global.gc();
+    Date.now().should.be.above(beforeGCTime);
+    beforeGCTime.should.be.aboveOrEqual(beforeGCFired);
+  });
+
+  it('raises afterGC event', function() {
+    var afterGCTime;
+    gcWatch.once('afterGC', function() {
+      afterGCTime = Date.now();
+    });
+    var beforeGCFired = Date.now();
+    global.gc();
+    Date.now().should.be.aboveOrEqual(afterGCTime);
+    afterGCTime.should.be.above(beforeGCFired);
+  });
+});
