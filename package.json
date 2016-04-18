@@ -1,10 +1,25 @@
 {
+  "name": "gc-watch",
+  "description": "Track node.js' garbage collection events and memory statistics",
+  "version": "0.1.0",
+  "author": "Sankha Narayan Guria <sankha93@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sankha93/node-gc-watch.git"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "bugs": "https://github.com/sankhs93/node-gc-memwatch.git",
   "dependencies": {
     "bindings": "^1.2.1",
     "nan": "^2.2.1"
   },
   "gypfile": true,
   "scripts": {
-    "test": "node --expose-gc test.js"
+    "install": "node-gyp rebuild"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.1"
   }
 }
