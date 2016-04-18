@@ -1,4 +1,4 @@
-var EventEmitter = require('events');
+var EventEmitter = require('events').EventEmitter;
 var util = require('util');
 var GCWatchImpl = require('bindings')('gc-watch-impl');
 

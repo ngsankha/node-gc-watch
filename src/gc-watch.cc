@@ -7,12 +7,12 @@ Nan::Persistent<Function> afterGCCallback;
 
 NAN_GC_CALLBACK(beforeGC) {
   Nan::HandleScope scope;
-  Nan::MakeCallback(Nan::GetCurrentContext()->Global(), Nan::New(beforeGCCallback), 0, {});
+  Nan::MakeCallback(Nan::GetCurrentContext()->Global(), Nan::New(beforeGCCallback), 0, NULL);
 }
 
 NAN_GC_CALLBACK(afterGC) {
   Nan::HandleScope scope;
-  Nan::MakeCallback(Nan::GetCurrentContext()->Global(), Nan::New(afterGCCallback), 0, {});
+  Nan::MakeCallback(Nan::GetCurrentContext()->Global(), Nan::New(afterGCCallback), 0, NULL);
 }
 
 NAN_METHOD(SetBeforeGCCallback) {
