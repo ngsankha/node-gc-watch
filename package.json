@@ -1,7 +1,7 @@
 {
   "name": "gc-watch",
   "description": "Track node.js' garbage collection events and memory statistics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Sankha Narayan Guria <sankha93@gmail.com>",
   "repository": {
     "type": "git",
